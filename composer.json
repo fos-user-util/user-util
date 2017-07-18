@@ -1,7 +1,7 @@
 {
     "name": "fos-user-util/user-util",
     "type": "library",
-    "description": "Trait and Methods to Query on a DBAL Connection",
+    "description": "Trait to use Symfony FOSUserBundle with SQL queries instead of object manager",
     "keywords": ["user-management", "fos-user", "persistence"],
     "homepage": "https://github.com/fos-user-util/user-util",
     "license": "MIT",
