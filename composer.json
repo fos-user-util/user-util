@@ -1,0 +1,29 @@
+{
+    "name": "fos-user-util/user-util",
+    "type": "library",
+    "description": "Trait and Methods to Query on a DBAL Connection",
+    "keywords": ["user-management", "fos-user", "persistence"],
+    "homepage": "https://github.com/fos-user-util/user-util",
+    "license": "MIT",
+    "authors": [
+        {"name": "Jean-Bernard Addor"}
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": { "FosUserUtil\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    },
+    "archive": {
+        "exclude": ["!vendor", "tests", "*phpunit.xml", ".travis.yml", "build.xml", "build.properties", "composer.phar"]
+    }
+}
