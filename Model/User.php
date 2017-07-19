@@ -1,6 +1,6 @@
 <?php
 
-namespace FosUserUtil;
+namespace FosUserUtil\Model;
 
 use FOS\UserBundle\Model\User as BaseUser;
 
@@ -8,7 +8,7 @@ use FOS\UserBundle\Model\User as BaseUser;
  * User
  *
  */
-class User extends BaseUser
+abstract class User extends BaseUser
 {
     public function __construct()
     {
