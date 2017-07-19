@@ -23,14 +23,34 @@ abstract class User extends BaseUser
 
     public static function objectVarsToDbArray($a) {
         // $a['roles'] = serialize($a['roles']);
-        $a['roles'] = json_encode($a['roles']);
-        $a['username_canonical'] = $a['usernameCanonical'];
-        $a['email_canonical'] = $a['emailCanonical'];
-        $a['last_login'] = $a['lastLogin'];
-        $a['confirmation_token'] = $a['confirmationToken'];
-        $a['password_requested_at'] = $a['passwordRequestedAt'];
-        unset($a['usernameCanonical'], $a['emailCanonical'], $a['plainPassword'], $a['lastLogin'], $a['confirmationToken'], $a['passwordRequestedAt']);
-        if ($a['groups'] == null) :
+        if (array_key_exists('roles', $a)) :
+            $a['roles'] = json_encode($a['roles']);
+        endif;
+        if (array_key_exists('usernameCanonical', $a)) :
+            $a['username_canonical'] = $a['usernameCanonical'];
+            unset($a['usernameCanonical']);
+        endif;
+        if (array_key_exists('emailCanonical', $a)) :
+            $a['email_canonical'] = $a['emailCanonical'];
+            unset($a['emailCanonical']);
+        endif;
+        if (array_key_exists('plainPassword', $a)) :
+            $a['plain_password'] = $a['plainPassword'];
+            unset($a['plainPassword']);
+        endif;
+        if (array_key_exists('lastLogin', $a)) :
+            $a['last_login'] = $a['lastLogin'];
+            unset($a['lastLogin']);
+        endif;
+        if (array_key_exists('confirmationToken', $a)) :
+            $a['confirmation_token'] = $a['confirmationToken'];
+            unset($a['confirmationToken']);
+        endif;
+        if (array_key_exists('passwordRequestedAt', $a)) :
+            $a['password_requested_at'] = $a['passwordRequestedAt'];
+            unset($a['passwordRequestedAt']);
+        endif;
+        if (array_key_exists('groups', $a) and $a['groups'] == null) :
             unset($a['groups']);
         endif;
         return $a;
