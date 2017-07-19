@@ -9,7 +9,8 @@
         {"name": "Jean-Bernard Addor"}
     ],
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.4",
+        "friendsofsymfony/user-bundle": "^2.0"
     },
     "require-dev": {
     },
