@@ -22,6 +22,10 @@ abstract class User extends BaseUser
     // TODO: do we want this public?
 
     public static function objectVarsToDbArray($a) {
+        if (array_key_exists('id', $a)) :
+            $a['uuid'] = $a['id'];
+            unset($a['id']);
+        endif;
         // $a['roles'] = serialize($a['roles']);
         if (array_key_exists('roles', $a)) :
             $a['roles'] = json_encode($a['roles']);
