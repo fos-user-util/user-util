@@ -150,6 +150,7 @@ class UserManager extends BaseUserManager
         // dump($user);
         $a = $user->getDbVars();
         dump($a);
+        unset($a['plain_password']);
         if ((!array_key_exists('id', $a) or $a['id'] == null) and (!array_key_exists('uuid', $a) or $a['uuid'] == null)) :
             // create (insert)
             unset($a['id']);
@@ -166,7 +167,6 @@ class UserManager extends BaseUserManager
             endif;
             // TODO: Manage the erroneous case with both 'id' and 'uuid'!
             unset($a['groups']); // TODO: make work for groups //////////////////////////////////////////////////////////
-            unset($a['plain_password']);
             dump($a);
             $this->queryObject->updateUniqueBy('http_user', ['uuid' => $id], $a, $user::DB_COLUMNS_TYPES);
             // die("Don\'t know how to update :-( oO9A5l4Q\n");
