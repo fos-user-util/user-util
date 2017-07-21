@@ -10,6 +10,11 @@ use FOS\UserBundle\Model\User as BaseUser;
  */
 abstract class User extends BaseUser
 {
+    const DB_COLUMNS_TYPES = [
+        'last_login' => 'datetime',
+        'password_requested_at' => 'datetime',
+    ];
+
     public function __construct()
     {
         parent::__construct();
