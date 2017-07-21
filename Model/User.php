@@ -53,7 +53,8 @@ abstract class User extends BaseUser
             unset($a['emailCanonical']);
         endif;
         if (array_key_exists('plainPassword', $a)) :
-            // $a['plain_password'] = $a['plainPassword']; // not saved to DB, but not sure if it should be supressed here
+            $a['plain_password'] = $a['plainPassword'];
+            // not saved to DB, but not sure if it should be supressed here => suppressed in User Manager!
             unset($a['plainPassword']);
         endif;
         if (array_key_exists('lastLogin', $a)) :
