@@ -37,7 +37,7 @@ abstract class User extends BaseUser
 
     public static function objectVarsToDbArray($a) {
         if (array_key_exists('id', $a)) :
-            $a['uuid'] = $a['id'];
+            $a['uuid'] = $a['id']; ///////////////////////////////////
             unset($a['id']);
         endif;
         // $a['roles'] = serialize($a['roles']);
@@ -53,7 +53,7 @@ abstract class User extends BaseUser
             unset($a['emailCanonical']);
         endif;
         if (array_key_exists('plainPassword', $a)) :
-            $a['plain_password'] = $a['plainPassword'];
+            // $a['plain_password'] = $a['plainPassword']; // not saved to DB, but not sure if it should be supressed here
             unset($a['plainPassword']);
         endif;
         if (array_key_exists('lastLogin', $a)) :
