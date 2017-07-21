@@ -21,6 +21,15 @@ abstract class User extends BaseUser
         // your own logic
     }
 
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+     // provisory
+     // should be added in interface and be made stable
+     // or one should use the constructor and update all code to work with the new constructor interface!
+     // and use new User(EMPTY_USER) instead of new User() or use the multiple constructor tric in http://php.net/manual/fr/language.oop5.decon.php#99903
+
     public function getVars() {
         return get_object_vars($this);
     }
