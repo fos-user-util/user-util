@@ -2,7 +2,7 @@
     "name": "fos-user-util/user-util",
     "type": "library",
     "description": "Trait to use Symfony FOSUserBundle with SQL queries instead of object manager",
-    "keywords": ["user-management", "fos-user", "persistence"],
+    "keywords": ["user-management", "fos-user", "persistence", "snowyowl"],
     "homepage": "https://github.com/fos-user-util/user-util",
     "license": "MIT",
     "authors": [
