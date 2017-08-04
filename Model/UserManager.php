@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace FosUserUtil\AbstractModel;
+namespace FosUserUtil\Model;
 
 // use Doctrine\Common\Persistence\ObjectManager;
 // use Doctrine\Common\Persistence\ObjectRepository;
