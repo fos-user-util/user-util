@@ -95,7 +95,7 @@ class UserManager extends BaseUserManager
         // dump($criteria);
         // dump(User::objectVarsToDbArray($criteria));
         // return $this->getRepository()->findOneBy($criteria);
-        $a = $this->queryObject->findUniqueBy('http_user', User::objectVarsToDbArray($criteria));
+        $a = $this->queryObject->findUniqueBy('http_user', AbstractUser::objectVarsToDbArray($criteria));
         // dump(new \DateTime($a['last_login']));
         // die($a['last_login']);
         // TODO: hide table name in an object ///////////////////////////////////////////////////////////////////////////////////////////////
